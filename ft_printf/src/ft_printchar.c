@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/26 13:17:23 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 02:57:56 by jchris           ###   ########.fr       */
+/*   Created: 2023/05/27 02:54:15 by jchris            #+#    #+#             */
+/*   Updated: 2023/05/27 02:54:53 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-int	main(void)
+int	ft_printchar(const char c)
 {
-	int	p;
-
-	p = ft_printdeci('a');
-	printf("\n%d\n", p);
+	write(1, &c, 1);
+	return (1);
 }

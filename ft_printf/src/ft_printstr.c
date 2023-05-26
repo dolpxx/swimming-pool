@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/26 13:17:23 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 02:57:56 by jchris           ###   ########.fr       */
+/*   Created: 2023/05/27 02:55:05 by jchris            #+#    #+#             */
+/*   Updated: 2023/05/27 02:55:47 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-int	main(void)
+int	ft_printstr(const char *str)
 {
-	int	p;
+	unsigned int	i;
 
-	p = ft_printdeci('a');
-	printf("\n%d\n", p);
+	if (str == NULL)
+		return ((int)write(1, "(null)", 6));
+	i = 0;
+	while (str[i] != '\0')
+		ft_printchar(str[i++]);
+	return ((int)i);
 }

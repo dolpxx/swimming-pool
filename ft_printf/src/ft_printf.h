@@ -6,12 +6,12 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:16:18 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/26 13:17:14 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 03:10:07 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF
-# define FT_PRINTF
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # define TRUE 1
 # define FALSE 0
@@ -22,5 +22,10 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+int	ft_printchar(const char c);
+int	ft_printdeci(int nb);
+int	ft_printhex(int nb);
+int	ft_printstr(const char *str);
 
 #endif
