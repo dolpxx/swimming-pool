@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:55:05 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:11:31 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 03:29:09 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_printstr(const char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	if (str == NULL)
 		return ((int)write(1, "(null)", 6));
