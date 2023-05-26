@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:16:18 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:11:42 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 03:21:13 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 int	ft_printchar(const char c);
 int	ft_printdeci(int nb);
 int	ft_printhex(int nb);
+int	ft_printpercent(void);
 int	ft_printstr(const char *str);
 
 #endif
