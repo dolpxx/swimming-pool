@@ -6,13 +6,13 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:54:15 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 02:54:53 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 04:28:36 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printchar(const char c)
+int	ft_printchar(int c)
 {
 	write(1, &c, 1);
 	return (1);

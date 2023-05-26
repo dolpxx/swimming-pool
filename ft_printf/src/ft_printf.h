@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:16:18 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:53:17 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 05:24:54 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int	ft_printchar(const char c);
+int	ft_formats(va_list args, const char format);
+int	ft_printchar(int c);
 int	ft_printdeci(int nb);
-int	ft_printhex(int nb, const char format);
+int	ft_printf(const char *str, ...);
+int	ft_printhex(unsigned int nb, const char format);
 int	ft_printpercent(void);
+int	ft_printptr(uintptr_t nb);
 int	ft_printstr(const char *str);
 int	ft_printunsigned(unsigned int nb);
 

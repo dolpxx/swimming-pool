@@ -6,13 +6,13 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:56:22 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:47:38 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 04:22:18 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_deci_digit(int nb);
+static int	ft_deci_digit(unsigned int nb);
 static int	g_deci;
 
 int	ft_printdeci(int nb)
@@ -43,12 +43,10 @@ int	ft_printdeci(int nb)
 	}
 }
 
-static int	ft_deci_digit(int nb)
+static int	ft_deci_digit(unsigned int nb)
 {
 	int	res;
 
-	if (nb == INT_MIN)
-		return (11);
 	if (nb == 0)
 		return (1);
 	res = 0;

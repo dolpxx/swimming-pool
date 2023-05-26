@@ -6,25 +6,19 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:57:23 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:47:15 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 04:07:26 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_hex_digit(int nb);
+static int	ft_hex_digit(unsigned int nb);
 static int	g_hex;
 
-int	ft_printhex(int nb, const char format)
+int	ft_printhex(unsigned int nb, const char format)
 {
-	if (nb == INT_MIN)
-		return (ft_printstr("80000000"));
 	if (g_hex == 0)
-	{
-		if (nb < 0)
-			return (ft_printhex(~nb + 1, format));
 		g_hex = ft_hex_digit(nb);
-	}
 	while (TRUE)
 	{
 		if (nb >= 16)
@@ -43,7 +37,7 @@ int	ft_printhex(int nb, const char format)
 	}
 }
 
-static int	ft_hex_digit(int nb)
+static int	ft_hex_digit(unsigned int nb)
 {
 	static int	res;
 
