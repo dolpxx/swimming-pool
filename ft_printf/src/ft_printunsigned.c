@@ -1,58 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printhex.c                                      :+:      :+:    :+:   */
+/*   ft_printunsigned.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/27 02:57:23 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:47:15 by jchris           ###   ########.fr       */
+/*   Created: 2023/05/27 03:45:07 by jchris            #+#    #+#             */
+/*   Updated: 2023/05/27 03:46:54 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_hex_digit(int nb);
-static int	g_hex;
+static int	ft_unsigned_digit(int nb);
+static int	g_unsigned;
 
-int	ft_printhex(int nb, const char format)
+int	ft_printunsigned(unsigned int nb)
 {
-	if (nb == INT_MIN)
-		return (ft_printstr("80000000"));
-	if (g_hex == 0)
+
+	if (g_unsigned == 0)
 	{
 		if (nb < 0)
-			return (ft_printhex(~nb + 1, format));
-		g_hex = ft_hex_digit(nb);
+		{
+			ft_printchar('-');
+			return (ft_printunsigned(-nb) + 1);
+		}
+		g_unsigned = ft_unsigned_digit(nb);
 	}
 	while (TRUE)
 	{
-		if (nb >= 16)
+		if (nb >= 10)
 		{
-			ft_printhex(nb / 16, format);
-			nb %= 16;
+			ft_printunsigned(nb / 10);
+			nb %= 10;
 		}
 		else
 		{
-			if (format == 'x')
-				ft_printchar("0123456789abcdef"[nb]);
-			else if (format == 'X')
-				ft_printchar("0123456789ABCDEF"[nb]);
-			return (g_hex);
+			ft_printchar(nb + '0');
+			return (g_unsigned);
 		}
 	}
 }
 
-static int	ft_hex_digit(int nb)
+static int	ft_unsigned_digit(int nb)
 {
-	static int	res;
+	int res;
 
+	if (nb == INT_MIN)
+		return (11);
 	if (nb == 0)
 		return (1);
 	res = 0;
 	while (nb > 0)
 	{
-		nb /= 16;
+		nb /= 10;
 		res++;
 	}
 	return (res);

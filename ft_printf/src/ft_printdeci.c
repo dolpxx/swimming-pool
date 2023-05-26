@@ -6,13 +6,13 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:56:22 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:03:19 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 03:47:38 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_decidigit(int nb);
+static int	ft_deci_digit(int nb);
 static int	g_deci;
 
 int	ft_printdeci(int nb)
@@ -26,7 +26,7 @@ int	ft_printdeci(int nb)
 			ft_printchar('-');
 			return (ft_printdeci(-nb) + 1);
 		}
-		g_deci = ft_decidigit(nb);
+		g_deci = ft_deci_digit(nb);
 	}
 	while (TRUE)
 	{
@@ -43,7 +43,7 @@ int	ft_printdeci(int nb)
 	}
 }
 
-static int	ft_decidigit(int nb)
+static int	ft_deci_digit(int nb)
 {
 	int	res;
 
