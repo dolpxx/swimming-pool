@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:17:23 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 03:11:28 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 03:55:27 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 int	main(void)
 {
+	int	n;
 	int	p;
 
-	p = ft_printdeci('a');
-	printf("\n%d\n", p);
+	n = 419283420;
+	p = ft_printunsigned(n);
+	printf("\n%u\n%d\n", n, p);
 }
