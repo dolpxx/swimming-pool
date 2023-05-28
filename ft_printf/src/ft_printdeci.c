@@ -6,27 +6,25 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:56:22 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 04:22:18 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 22:33:28 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static int	ft_deci_digit(unsigned int nb);
-static int	g_deci;
 
 int	ft_printdeci(int nb)
 {
+	int	res_deci;
+
+	res_deci = ft_deci_digit(nb);
 	if (nb == INT_MIN)
 		return (ft_printstr("-2147483648"));
-	if (g_deci == 0)
+	if (nb < 0)
 	{
-		if (nb < 0)
-		{
-			ft_printchar('-');
-			return (ft_printdeci(-nb) + 1);
-		}
-		g_deci = ft_deci_digit(nb);
+		ft_printchar('-');
+		return (ft_printdeci(-nb) + 1);
 	}
 	while (TRUE)
 	{
@@ -37,8 +35,8 @@ int	ft_printdeci(int nb)
 		}
 		else
 		{
-			ft_printchar(nb + '0');
-			return (g_deci);
+			ft_printchar("0123456789"[nb]);
+			return (res_deci);
 		}
 	}
 }
@@ -57,3 +55,10 @@ static int	ft_deci_digit(unsigned int nb)
 	}
 	return (res);
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	printf("%d\n", ft_deci_digit(1020305));
+// }

@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 04:01:13 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 05:15:26 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/27 05:41:07 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ static int	ft_digitptr(uintptr_t nb)
 {
 	int	res;
 
+	if (nb == 0)
+		return (3);
 	res = 2;
 	while (nb > 0)
 	{
