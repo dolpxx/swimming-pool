@@ -8,6 +8,7 @@ SRCS	= ft_formats.c \
 		  ft_printptr.c \
 		  ft_printstr.c \
 		  ft_printunsigned.c \
+		  ft_printbin.c \
 		
 HDS		= ft_printf.h
 OBJS	= $(SRCS:.c=.o)

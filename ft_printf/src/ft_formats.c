@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 05:22:44 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 18:30:05 by jchris           ###   ########.fr       */
+/*   Updated: 2023/05/30 18:29:13 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ int	ft_formats(va_list args, const char format)
 		result_length += ft_printhex(va_arg(args, unsigned int), format);
 	else if (format == '%')
 		result_length += ft_printpercent();
+	else if (format == 'b')
+		result_length += ft_printbin(va_arg(args, unsigned int));
 	return (result_length);
 }
