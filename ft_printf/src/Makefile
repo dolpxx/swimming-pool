@@ -4,6 +4,7 @@ SRCS	= ft_formats.c \
 		  ft_printdeci.c \
 		  ft_printf.c \
 		  ft_printhex.c \
+		  ft_println.c \
 		  ft_printpercent.c \
 		  ft_printptr.c \
 		  ft_printstr.c \
