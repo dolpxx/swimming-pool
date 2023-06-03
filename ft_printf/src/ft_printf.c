@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 05:18:00 by jchris            #+#    #+#             */
-/*   Updated: 2023/05/27 22:22:16 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/03 22:53:32 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ int	ft_printf(const char *str, ...)
 	int		result_length;
 	va_list	args;
 
+	if (str == NULL)
+	{
+		ft_printf("");
+		return (0);
+	}
 	i = 0;
 	result_length = 0;
 	va_start(args, str);

@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 21:26:28 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/01 17:06:26 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/03 22:52:58 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	main(void)
 {
-	ft_println("hello world!");
+	ft_printf(NULL);
 }
