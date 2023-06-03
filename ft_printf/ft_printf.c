@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 05:18:00 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/03 22:53:32 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/04 00:17:30 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_printf(const char *str, ...)
 
 	if (str == NULL)
 	{
-		ft_printf("");
-		return (0);
+		ft_printf("%s\n", NULL);
+		return (7);
 	}
 	i = 0;
 	result_length = 0;

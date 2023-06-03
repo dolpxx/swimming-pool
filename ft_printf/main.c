@@ -6,13 +6,15 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 21:26:28 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/03 22:52:58 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/04 00:21:14 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	main(void)
 {
-	ft_printf(NULL);
+	printf(NULL, 32, 3213, 31231, 12312, 312313123);
+	ft_printf(NULL, 32, 3213, 31231, 12312, 312313123);
 }
