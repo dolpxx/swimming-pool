@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 09:41:17 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/05 14:19:31 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/05 14:24:00 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,10 +105,10 @@ char	*get_next_line(int fd)
 	return (ans);
 }
 
-// int	main(void)
-// {
-// 	char	*p;
+int	main(void)
+{
+	char	*p;
 
-// 	p = get_next_line(0);
-// 	printf("%s\n", p);
-// }
+	p = get_next_line(0);
+	printf("%s\n", p);
+}

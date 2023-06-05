@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 09:42:04 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/05 14:15:18 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/05 14:27:39 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# if !BUFFER_SIZE || BUFFER_SIZE <= 0 || BUFFER_SIZE > INT_MAX - 1
+# if !BUFFER_SIZE || BUFFER_SIZE <= 1 || BUFFER_SIZE > INT_MAX - 1
 #  undef BUFFER_SIZE
 #  define BUFFER_SIZE 4096
 # endif
