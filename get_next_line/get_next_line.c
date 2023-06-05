@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 09:41:17 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/05 18:37:25 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/05 18:40:12 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,5 @@ int	main(void)
 
 	p = get_next_line(0);
 	printf("%s\n", p);
-	printf("%d\n", BUFFER_SIZE);
+	printf("BUFFER_SIZE = %d\n", BUFFER_SIZE);
 }
