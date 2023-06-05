@@ -6,16 +6,16 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 09:41:17 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/05 14:24:00 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/05 18:37:25 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdio.h>
 
-unsigned int	ft_strlen(const char *s1)
+size_t	ft_strlen(const char *s1)
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (s1 == NULL)
 		return (0);
@@ -25,11 +25,11 @@ unsigned int	ft_strlen(const char *s1)
 	return (i);
 }
 
-char	*ft_strndup(const char *s1, unsigned int end)
+char	*ft_strndup(const char *s1, size_t end)
 {
-	unsigned int	len;
-	char			*p;
-	unsigned int	i;
+	size_t	len;
+	char	*p;
+	size_t	i;
 
 	if (s1 == NULL)
 		return (NULL);
@@ -46,10 +46,10 @@ char	*ft_strndup(const char *s1, unsigned int end)
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	unsigned int	s1_len;
-	unsigned int	s2_len;
-	char			*p;
-	unsigned int	i;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*p;
+	size_t	i;
 
 	if (s1 == NULL)
 		return ((char *)(s2));
@@ -69,9 +69,9 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	return (p);
 }
 
-char	*ft_strinit(char *s1, unsigned int len)
+char	*ft_strinit(char *s1, size_t len)
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (s1 == NULL)
 		return (NULL);
@@ -83,11 +83,13 @@ char	*ft_strinit(char *s1, unsigned int len)
 
 char	*get_next_line(int fd)
 {
-	char			str[BUFFER_SIZE + 1];
-	int				size;
-	unsigned int	i;
-	char			*ans;
+	char	str[BUFFER_SIZE + 1];
+	int		size;
+	size_t	i;
+	char	*ans;
 
+	if (BUFFER_SIZE == -1)
+		return (NULL);
 	ans = "";
 	ft_strinit(str, BUFFER_SIZE);
 	while (TRUE)
@@ -111,4 +113,5 @@ int	main(void)
 
 	p = get_next_line(0);
 	printf("%s\n", p);
+	printf("%d\n", BUFFER_SIZE);
 }

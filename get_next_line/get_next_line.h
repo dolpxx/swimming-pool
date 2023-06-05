@@ -6,7 +6,7 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 09:42:04 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/05 14:27:39 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/05 18:36:59 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# if !BUFFER_SIZE || BUFFER_SIZE <= 1 || BUFFER_SIZE > INT_MAX - 1
+# if !BUFFER_SIZE || BUFFER_SIZE <= 0 || BUFFER_SIZE > INT_MAX - 1
 #  undef BUFFER_SIZE
-#  define BUFFER_SIZE 4096
+#  define BUFFER_SIZE -1
 # endif
 
-unsigned int	ft_strlen(const char *s1);
-char			*ft_strndup(const char *s1, unsigned int end);
-char			*ft_strinit(char *s1, unsigned int len);
-char			*get_next_line(int fd);
+# if BUFFER_SIZE > 1048576
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 1048576
+# endif
+
+size_t	ft_strlen(const char *s1);
+char	*ft_strndup(const char *s1, size_t end);
+char	*ft_strinit(char *s1, size_t len);
+char	*get_next_line(int fd);
 
 #endif
