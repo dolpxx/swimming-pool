@@ -6,11 +6,11 @@
 /*   By: jchris <jchris@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 14:18:52 by jchris            #+#    #+#             */
-/*   Updated: 2023/06/05 18:37:54 by jchris           ###   ########.fr       */
+/*   Updated: 2023/06/06 13:48:05 by jchris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	f(void)
+static void	f(void)
 {
-	return (0);
+	return ;
 }
